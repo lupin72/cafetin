@@ -501,8 +501,24 @@ add_theme_support( 'avia_post_meta_compat');
 add_theme_support('force-post-thumbnails-in-widget');
 
 
+function wpdocs_add_menu_parent_class( $items ) {
+  
 
-
+    // Collect menu items with parents.
+	foreach ( $items as $item ) {
+    	if(is_front_page()) :
+			$item->url = str_replace('/#','#',$item->url);
+			if(isset($item->classes[4])) :
+				unset($item->classes[4]);
+			endif;	
+			if(isset($item->classes[5])) :
+				unset($item->classes[5]);
+			endif;	
+		endif;	
+    }
+    return $items;
+}
+add_filter( 'wp_nav_menu_objects', 'wpdocs_add_menu_parent_class' );
 
 
 
@@ -517,3 +533,5 @@ require_once( 'functions-enfold.php');
  * add option to edit elements via css class
  */
 // add_theme_support('avia_template_builder_custom_css');
+
+
