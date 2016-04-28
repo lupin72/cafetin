@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "06c166a7e4f778743beb9228144cdf1e",
+    "hash": "3f4ddbc4052a21f83d2f869f2b8f87b4",
+    "content-hash": "bdd28daf7f5e99ca7c6693716f22e667",
     "packages": [
         {
             "name": "composer/installers",
@@ -339,6 +340,26 @@
                 "environment"
             ],
             "time": "2016-04-15 10:48:49"
+        },
+        {
+            "name": "wpackagist-plugin/media-file-renamer",
+            "version": "2.7.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
+                "reference": "tags/2.7.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.2.7.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/media-file-renamer/"
         }
     ],
     "packages-dev": [

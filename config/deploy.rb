@@ -20,8 +20,8 @@ set :log_level, :info
 set :linked_files, fetch(:linked_files, []).push('.env')
 set :linked_dirs, fetch(:linked_dirs, []).push('web/app/uploads')
 
-server 'cafetin.dev', user: 'vagrant', roles: %w{dev}
-set :dev_path, '/srv/www/cafetin.dev/current'
+#server 'cafetin.dev', user: 'vagrant', roles: %w{dev}
+#set :dev_path, '/srv/www/cafetin.dev/current'
 
 namespace :deploy do
   desc 'Restart application'
